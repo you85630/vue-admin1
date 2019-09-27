@@ -3,13 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "npm run serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build-pro": "vue-cli-service build --dest pro-dist"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "core-js": "^2.6.5",
+    "iview": "^3.5.1",
     "vue": "^2.6.10",
+    "vue-cookies": "^1.5.13",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1"
   },
@@ -34,7 +39,14 @@
       "plugin:vue/essential",
       "@vue/standard"
     ],
-    "rules": {},
+    "rules": {
+      "vue/no-parsing-error": [
+        2,
+        {"x-invalid-end-tag": false}
+      ],
+      "vue/no-side-effects-in-computed-properties": 0,
+      "eqeqeq": "off"
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }

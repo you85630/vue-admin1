@@ -14,6 +14,6 @@ git init
 git add .
 git commit -m 'deploy'
 
-git push -f https://github.com/you85630/vue-admin1.git master
+git push -f git@github.com:you85630/vue-admin1.git master
 
 cd -

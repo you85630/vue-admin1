@@ -11,9 +11,9 @@ cd dist
 # 提交到本地仓库
 
 git init
-git add -A
+git add .
 git commit -m 'deploy'
 
-git push -f https://github.com/you85630/vue-admin1.git master:gh-pages
+git push -f https://github.com/you85630/vue-admin1.git master
 
 cd -
